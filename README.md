@@ -4,7 +4,7 @@
 
 **Course:** COS 214 - Practical 5 (2026)  
 **Language:** C++11  
-**Team Members:** Lwandiso,Nasiha, Jordan  
+**Team Members:** Lwandiso, Nasiha, Jordan  
 
 ## About the Project
 CampusGuard is an emergency-response coordination platform designed for a large university campus. During a campus incident, multiple operational units—such as security teams, medical responders, facilities staff, and access-control systems—need to coordinate quickly and effectively. 
