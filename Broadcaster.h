@@ -28,7 +28,7 @@ public:
     void addColleague(Colleague* c);
     const std::vector<Colleague*>& getColleagues() const;
 
-    // State / Strategy contexts (both taken over by the Broadcaster)
+    // State / Strategy contexts 
     void setState(IncidentState* state);
     void setStrategy(ResponseStrategy* strategy);
     void executeResponse();
@@ -46,7 +46,7 @@ private:
     std::vector<Colleague*>     colleagues;
     IncidentState*              currentState;
     ResponseStrategy*           strategy;
-    std::vector<IncidentState*> retiredStates;  // states replaced during handleUpdate()
+    std::vector<IncidentState*> retiredStates;  
     bool                        inUpdate;
     std::string                 lastEvent;
     std::string                 location;
