@@ -1,4 +1,4 @@
-//  MEDIATOR colleague / COMMAND receiver.
+// MEDIATOR colleague / COMMAND receiver.
 #ifndef CAMPUSSECURITY_H
 #define CAMPUSSECURITY_H
 #include "Colleague.h"

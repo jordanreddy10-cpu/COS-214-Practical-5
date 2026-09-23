@@ -1,4 +1,4 @@
-// [Nasiha] MEDIATOR - abstract mediator.
+// abstract mediator.
 #ifndef MEDIATOR_H
 #define MEDIATOR_H
 #include <string>

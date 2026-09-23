@@ -1,10 +1,9 @@
-// concrete mediator.
-//
+// MEDIATOR - concrete mediator.
+
 // Ownership:
-//   * Owns currentState and strategy (deleted in destructor).
-//   * Does NOT own the colleagues (aggregation): the application creates and
-//     destroys them. Colleagues never call the mediator from their destructor,
-//     so destruction order is irrelevant.
+//   OWNS currentState and strategy (deleted in destructor / on replacement).
+//   Does NOT own the colleagues (aggregation)
+
 #ifndef BROADCASTER_H
 #define BROADCASTER_H
 #include <string>
@@ -29,7 +28,7 @@ public:
     void addColleague(Colleague* c);
     const std::vector<Colleague*>& getColleagues() const;
 
-    // State / Strategy contexts
+    // State / Strategy contexts (both taken over by the Broadcaster)
     void setState(IncidentState* state);
     void setStrategy(ResponseStrategy* strategy);
     void executeResponse();

@@ -1,14 +1,12 @@
 // MEDIATOR (Colleague) + COMMAND (Invoker AND Receiver).
-//
-// Ownership:
-//   * A Colleague OWNS its assignedCommand (setCommand takes ownership).
-//   * A Colleague does NOT own the Mediator (non-owning pointer).
-//   * Not copyable (would double-delete the command).
+
+//   A Colleague OWNS its assignedCommand (setCommand takes ownership).
+//   A Colleague does NOT own the Mediator (non-owning pointer).
+
 #ifndef COLLEAGUE_H
 #define COLLEAGUE_H
 #include <string>
 #include "Mediator.h"
-#include "OperationFailed.h"
 
 class Command;
 
@@ -31,7 +29,7 @@ public:
     void triggerCommand();
 
     // ---- Receiver operations (Colleague acting as RECEIVER) ----
-    // Defaults throw OperationFailed: not every unit can do everything.
+    // Defaults call reportFailure(): not every unit can do everything.
     virtual void dispatchTo(const std::string& location) = 0;
     virtual void lockArea(const std::string& area);
     virtual void unlockArea(const std::string& area);
@@ -39,6 +37,10 @@ public:
     virtual void notifyOf(const std::string& message);
 
 protected:
+    // A receiver that cannot perform a command reports it here: logs the reason and
+    // tells the mediator (event "COMMAND_FAILED"). No exceptions involved.
+    void reportFailure(const std::string& why);
+
     Mediator* mediator;
     Command*  assignedCommand;
 
