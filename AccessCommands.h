@@ -1,3 +1,4 @@
+// COMMAND - Access branch: Access (abstract), Lock, Unlock, Restrict.
 #ifndef ACCESSCOMMANDS_H
 #define ACCESSCOMMANDS_H
 #include <string>

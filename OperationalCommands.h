@@ -1,4 +1,4 @@
-//  COMMAND - Operational branch
+// COMMAND - Operational branch: Operational (abstract), Dispatch, Notify.
 #ifndef OPERATIONALCOMMANDS_H
 #define OPERATIONALCOMMANDS_H
 #include <string>
