@@ -1,6 +1,5 @@
 // MEDIATOR colleague / COMMAND receiver.
-// Talks to the outside world through a Communicator (non-owning association;
-// the application owns the concrete Communicator).
+// Talks to the outside world through a Communicator
 #ifndef MEDICAL_H
 #define MEDICAL_H
 #include "Colleague.h"

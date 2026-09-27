@@ -1,4 +1,4 @@
-// MEDIATOR colleague / COMMAND receiver (facilities + access control).
+// MEDIATOR colleague / COMMAND receiver 
 #ifndef STAFF_H
 #define STAFF_H
 #include <map>
@@ -15,6 +15,6 @@ public:
     void restrictArea(const std::string& area);
     std::string getAreaStatus(const std::string& area) const;
 private:
-    std::map<std::string, std::string> areas;   // area -> LOCKED / RESTRICTED (absent = OPEN)
+    std::map<std::string, std::string> areas;   
 };
 #endif

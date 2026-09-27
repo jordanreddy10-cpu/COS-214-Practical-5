@@ -1,7 +1,7 @@
-// MEDIATOR - concrete mediator.
+// concrete mediator.
 
 // Ownership:
-//   OWNS currentState and strategy (deleted in destructor / on replacement).
+//   OWNS currentState and strategy
 //   Does NOT own the colleagues (aggregation)
 
 #ifndef BROADCASTER_H
