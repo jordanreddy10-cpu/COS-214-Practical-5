@@ -90,3 +90,30 @@ const std::string& Broadcaster::getLocation() const { return location; }
 std::string Broadcaster::getStatusName() const {
     return currentState ? currentState->getStatusName() : "NONE";
 }
+
+Colleague* Broadcaster::getSecurityTeam() {
+    for (Colleague* c : colleagues) {
+        if (c->getRole() == "SECURITY") {
+            return c;
+        }
+    }
+    return nullptr;
+}
+
+Colleague* Broadcaster::getMedicalTeam() {
+    for (Colleague* c : colleagues) {
+        if (c->getRole() == "MEDICAL") {
+            return c;
+        }
+    }
+    return nullptr;
+}
+
+Colleague* Broadcaster::getStaffTeam() {
+    for (Colleague* c : colleagues) {
+        if (c->getRole() == "FACILITIES") { 
+            return c;
+        }
+    }
+    return nullptr;
+}

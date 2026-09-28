@@ -38,6 +38,9 @@ public:
     void setLocation(const std::string& location);
     const std::string& getLocation() const;
     std::string getStatusName() const;
+    Colleague* getStaffTeam();
+    Colleague* getMedicalTeam();
+    Colleague* getSecurityTeam();
 
 private:
     bool isRegistered(Colleague* c) const;
@@ -51,4 +54,5 @@ private:
     std::string                 lastEvent;
     std::string                 location;
 };
+
 #endif
