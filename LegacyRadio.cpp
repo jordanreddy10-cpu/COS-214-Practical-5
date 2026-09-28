@@ -3,5 +3,5 @@
 
 void LegacyRadio::transmitAnalogSignal(int frequency, const char* data) 
 {
-    std::cout << "[Legacy Radio] freq: " << frequency << "msg: " << data << std::endl;
+    std::cout << "older radio has freq: " << frequency << "msg: " << data << std::endl;
 }

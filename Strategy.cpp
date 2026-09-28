@@ -14,8 +14,7 @@ void MedStrategy::determineResponse(Mediator* context) {
         std::string location = hub->getLocation();
         std::string trigger = hub->getLastEvent();
         
-        std::cout << "[MedStrategy] Medical response triggered by " << trigger 
-                  << " at " << location << std::endl;
+        std::cout << "Medical response started by " << trigger << " at " << location << std::endl;
 
 
         Colleague* medTeam = hub->getMedicalTeam();
@@ -26,7 +25,7 @@ void MedStrategy::determineResponse(Mediator* context) {
         medTeam->setCommand(cmd);
         medTeam->triggerCommand();
         
-        delete cmd;
+        //delete cmd;
     }
 }
 
@@ -37,7 +36,7 @@ void SecurityStrategy::determineResponse(Mediator* context) {
         std::string location = hub->getLocation();
         std::string trigger = hub->getLastEvent();
         
-        std::cout << "[SecurityStrategy] Analyzing " << trigger << " at " << location << std::endl;
+        std::cout << "Security response started by " << trigger << " at " << location << std::endl;
 
         Colleague* secTeam = hub->getSecurityTeam();
         Colleague* staffTeam = hub->getStaffTeam();
@@ -51,7 +50,7 @@ void SecurityStrategy::determineResponse(Mediator* context) {
         staffTeam->setCommand(r_cmd);
         staffTeam->triggerCommand();
         
-        delete l_cmd;
-        delete r_cmd;
+        //delete l_cmd;
+        //delete r_cmd;
     }
 }

@@ -1,6 +1,8 @@
 #ifndef COMMUNICATOR_H
 #define COMMUNICATOR_H
 
+#include <string>
+
 class Communicator {
 public:
     virtual ~Communicator() = default;

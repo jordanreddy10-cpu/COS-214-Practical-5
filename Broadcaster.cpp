@@ -1,7 +1,7 @@
 #include "Broadcaster.h"
 #include "Colleague.h"
 #include "IncidentState.h"
-#include "ResponseStrategy.h"
+#include "Strategy.h"
 #include <algorithm>
 #include <iostream>
 
@@ -81,7 +81,7 @@ void Broadcaster::executeResponse() {
         std::cout << "[Mediator] ERROR: no response strategy selected, nothing to execute\n";
         return;
     }
-    strategy->decideResponse(this);
+    strategy->determineResponse(this);
 }
 
 const std::string& Broadcaster::getLastEvent() const { return lastEvent; }

@@ -9,7 +9,7 @@ class Adapter : public Communicator {
 private:
     LegacyRadio* oldRadio;
 public:
-    Adapter(LegacyRadio* radio) : oldRadio(radio) {}
+    Adapter(LegacyRadio* radio);
     void sendMessage(const std::string& message) override;
 };
 
