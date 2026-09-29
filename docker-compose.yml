@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  campus-guard:
+    build: .
+    container_name: campus_guard_demo
+    # Keeps standard input open and allocates a pseudo-TTY so you can interact with GDB if needed
+    stdin_open: true 
+    tty: true
